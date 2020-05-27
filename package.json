@@ -1,5 +1,5 @@
 {
-  "name": "corona_tracker_v1",
+  "name": "corona_tracker_2ndatp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,6 @@
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
-    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-countup": "^4.3.3",
