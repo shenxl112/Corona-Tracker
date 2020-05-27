@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 import { NativeSelect, FormControl } from '@material-ui/core';
-import { fetchCountries } from '../../api';
 
 import styles from './CountryPicker.module.css';
 
-const Countries = ({ handleCountryChange }) => {
+import { fetchCountries } from "../../api";
+
+const CountryPicker = ({ handleCountryChange }) => {
   const [fetchedCountries, setFetchedCountries] = useState([]);
 
   useEffect(() => {
     const fetchAPI = async () => {
       setFetchedCountries(await fetchCountries());
     };
-
     fetchAPI();
-  }, []);
+  }, [setFetchedCountries]);
+
+  // console.log(fetchedCountries); //나라만 나옴
 
   return (
     <FormControl className={styles.formControl}>
@@ -30,4 +31,4 @@ const Countries = ({ handleCountryChange }) => {
   );
 };
 
-export default Countries;
+export default CountryPicker;
